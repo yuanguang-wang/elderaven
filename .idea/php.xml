@@ -8,7 +8,7 @@
   <component name="PhpInterpreters">
     <interpreters>
       <interpreter id="654fe19b-55f5-4a55-931b-7c193959880b" name="root@167.71.159.79:22 key" home="sshConfig://DATA" debugger_id="php.debugger.XDebug">
-        <remote_data INTERPRETER_PATH="/usr/bin/php" HELPERS_PATH="/root/.phpstorm_helpers" INITIALIZED="false" VALID="true" RUN_AS_ROOT_VIA_SUDO="false" SSH_CONFIG_ID="17c132f7-fad2-40d8-87f6-8ff2807f31a3" SSH_CONFIG_NAME="root@167.71.159.79:22 key" SSH_CREDENTIALS_ID="sshConfig://root@167.71.159.79:22 key" />
+        <remote_data INTERPRETER_PATH="/usr/bin/php" HELPERS_PATH="/root/.phpstorm_helpers" INITIALIZED="false" VALID="true" RUN_AS_ROOT_VIA_SUDO="false" SSH_CONFIG_ID="17c132f7-fad2-40d8-87f6-8ff2807f31a3" SSH_CONFIG_NAME="elderaven.com" SSH_CREDENTIALS_ID="sshConfig://elderaven.com" />
       </interpreter>
     </interpreters>
   </component>
@@ -63,7 +63,7 @@
       </interpreter>
     </phpInfoCache>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
+  <component name="PhpProjectSharedConfiguration">
     <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>
 </project>

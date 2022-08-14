@@ -1,9 +1,11 @@
-<DOCTYPE HTML>
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 
 <body>
 <p> hello world </p>
-</body>
+<h1> hello </h1>
 
+
+</body>
 
 </html>

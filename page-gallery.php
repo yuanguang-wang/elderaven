@@ -7,7 +7,7 @@
     </div>
     <hr>
 
-    <div class="row row-cols-md-4 g-4 pt-2">
+    <div id="row-style" class="row row-cols-md-4 g-4 pt-4">
         <div class="col-sm">
             <div class="card rounded-0">
                 <a href="https://elderaven.com/15-minus-and-counting/">
@@ -28,12 +28,10 @@
                 <div class="card-footer d-sm-none d-md-none d-lg-block">UPS Hub</div>
             </div>
         </div>
-        <div class="col-sm">
-            <div class="card rounded-0">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallerycard/gc04.jpg" alt="Empty Pot" class="card-img-top rounded-0">
-                <div class="card-footer d-sm-none d-md-none d-lg-block">Empty Pot</div>
-            </div>
-        </div>
+        <script>
+            galleryCardGen("#", "<?php echo get_template_directory_uri(); ?>/assets/images/gallerycard/gc04.jpg", "Empty Pot");
+        </script>
+
 
     </div>
     <div class="row row-cols-md-4 g-4 pt-4">

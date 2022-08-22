@@ -1,49 +1,51 @@
-const styleCollection = 
+const galleryStyleCollection = 
 {
-    rowStyle : "row row-cols-md-4 g-4 pt-2",
+    rowStyle : "row row-cols-md-4 g-4 mt-1",
     colomnStyle : "col-sm",
-    cardStyle : "card rounded-0",
-    imgStyle : "card-img-top rounded-0",
-    footerStyle : "card-footer d-sm-none d-md-none d-lg-block"
+    cardStyle : "card border-light",
+    imgStyle : "card-img border-light",
+    overlayStyle : "card-img-overlay d-sm-none d-md-none d-lg-flex d-flex align-items-end p-0 text-decoration-none",
+    textStyle : "card-title bg-dark text-white bg-opacity-50 py-1 px-2 m-0 flex-fill rounded-bottom"
+    
 }
 
-function galleryCardGen (href, imgSrc, content)
+function AddGalleryCard(content, rowId, href, imgSrc) 
 {
-    // Four Column Create //
-    let singleCol = document.createElement("div");
-    singleCol.className = styleCollection.colomnStyle;
-
-    //Card Create //
-    let card = document.createElement("div");
-    card.className = styleCollection.cardStyle;
-    
-    // Anchor Create //
-    let anchor = document.createElement("a");
-    anchor.href = href;
-    
     // Image Create //
     let image = document.createElement("img");
-    image.className = styleCollection.imgStyle;
+    image.className = galleryStyleCollection.imgStyle;
     image.alt = content;
     image.src = imgSrc;
-    
-    // Footer Create //
-    let footer = document.createElement("div");
-    footer.className = styleCollection.footerStyle;
-    footer.innerHTML = content;
+
+    // Overlay Create //
+    let overlay = document.createElement("a");
+    overlay.className = galleryStyleCollection.overlayStyle;
+    overlay.href = href;
+    let text = document.createElement("div");
+    text.className = galleryStyleCollection.textStyle;
+    text.innerText = content;
+
+    // Card Create //
+    let card = document.createElement("div");
+    card.className = galleryStyleCollection.cardStyle;
+
+    // Four Column Create //
+    let singleCol = document.createElement("div");
+    singleCol.className = galleryStyleCollection.colomnStyle;
 
     // Hierarchy
-    anchor.appendChild(image);
-    card.appendChild(anchor);
-    card.appendChild(footer);
+    overlay.appendChild(text);
+    card.appendChild(image);
+    card.appendChild(overlay);
     singleCol.appendChild(card);
-
+    document.getElementById(rowId).appendChild(singleCol);
 }
 
-function rowStyle ()
+function AddGalleryRowStyle(rowId)
 {
-    let singleRow = document.getElementById("row-style");
-    singleRow.className = styleCollection.rowStyle;
+    let singleRow = document.getElementById(rowId);
+    singleRow.className = galleryStyleCollection.rowStyle;
 }
+
 
 

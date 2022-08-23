@@ -5,5 +5,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
 
+.elderaven-font{
+    font-family: 'Petit Formal Script', 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
 }

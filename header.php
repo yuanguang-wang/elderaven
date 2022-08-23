@@ -12,18 +12,18 @@
     ?>
 
     <nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
-        <div class="container">
+        <div class="container d-flex flex-row-reverse px-1">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'your-theme-slug'); ?>">
+            <button class="navbar-toggler mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'your-theme-slug'); ?>">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="https://elderaven.com">elderaven</a>
+            <a class="navbar-brand elderaven-font px-2" href="https://elderaven.com">elderaven</a>
             <?php
             wp_nav_menu(array(
                 'theme_location'    => 'primary',
                 'depth'             => 2,
                 'container'         => 'div',
-                'container_class'   => 'collapse navbar-collapse',
+                'container_class'   => 'collapse navbar-collapse px-2',
                 'container_id'      => 'bs-example-navbar-collapse-1',
                 'menu_class'        => 'nav navbar-nav',
                 'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<article class="container pt-5">
+<article class="container py-2">
     <?php
     if (have_posts()) {
         while (have_posts()) {

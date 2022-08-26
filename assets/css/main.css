@@ -1,12 +1,25 @@
 .home {
-
-    background-image: url('/wp-content/themes/elderaven/assets/images/erh-summer-afternoon.jpg'); 
     background-position: right top;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
+.rvnbg-noon-autumn {
+    background-image: url('/wp-content/themes/elderaven/assets/images/background/220826-noon-autumn.jpg'); 
+}
+
+.rvnbg-dark-autumn {
+    background-image: url('/wp-content/themes/elderaven/assets/images/background/220826-dark-autumn.jpg'); 
+}
+
+.rvnbg-dawn-autumn {
+    background-image: url('/wp-content/themes/elderaven/assets/images/background/220826-dawn-autumn.jpg'); 
+}
+
+.rvnbg-fallback {
+    background-image: url('/wp-content/themes/elderaven/assets/images/background/220826-noon-autumn.jpg'); 
+}
 
 .elderaven-font {
     font-family: 'Petit Formal Script', 'Helvetica Neue', 'Arial', sans-serif;

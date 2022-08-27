@@ -2,7 +2,7 @@ const galleryStyleCollection =
 {
     rowStyle : "row row-cols-md-4 g-4 mt-1",
     colomnStyle : "col-sm",
-    cardStyle : "card border-secondary",
+    cardStyle : "card border-dark border-opacity-50",
     imgStyle : "card-img border-light",
     overlayStyle : "card-img-overlay d-sm-none d-md-none d-lg-flex d-flex align-items-end p-0 text-decoration-none",
     textStyle : "card-title bg-dark text-white bg-opacity-50 py-1 px-2 m-0 flex-fill rounded-bottom"

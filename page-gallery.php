@@ -3,11 +3,10 @@
 
 <div class="container">
 
-    <br class="mt-2">
-    <div class="m-2 text-center rounded">
-        <h4>Project Gallery</h4>
+    <div class="text-sm-left d-none d-md-block mt-3">
+        <h5 class="fw-normal mt-2 mx-2 mb-1">Project Gallery</h5>
+        <hr class="mb-0">
     </div>
-    <hr class="mb-0">
 
     <div id="row-1">
         <script>

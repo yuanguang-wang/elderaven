@@ -2,7 +2,7 @@ const galleryStyleCollection =
 {
     rowStyle : "row row-cols-md-4 g-4 mt-1",
     colomnStyle : "col-sm",
-    cardStyle : "card border-light",
+    cardStyle : "card border-secondary",
     imgStyle : "card-img border-light",
     overlayStyle : "card-img-overlay d-sm-none d-md-none d-lg-flex d-flex align-items-end p-0 text-decoration-none",
     textStyle : "card-title bg-dark text-white bg-opacity-50 py-1 px-2 m-0 flex-fill rounded-bottom"
@@ -55,7 +55,7 @@ function SwitchBackground()
     const winter = [10,11,0];
 
     const dawn = [5,6,18,19];
-    const noon = [8,9,10,11,12,13,14,15,16,17];
+    const noon = [7,8,9,10,11,12,13,14,15,16,17];
     const dark = [20,21,22,23,0,1,2,3,4];
 
     const date = new Date();
@@ -64,7 +64,6 @@ function SwitchBackground()
 
     if (autumn.includes(month))
     {
-        console.log("test");
         if (dawn.includes(time))
         {
             document.body.classList.add("rvnbg-dawn-autumn");
@@ -87,6 +86,104 @@ function SwitchBackground()
         document.body.classList.add("rvnbg-fallback");
     }
     
+}
+
+// Dark Mode /////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+function HomePageException(classarray)
+{
+    if (classarray.contains("home"))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+function SwitchtoDark(classarray, light, dark)
+{
+    if (classarray.contains(light))
+    {
+        classarray.remove(light);
+    }
+    if (!classarray.contains(dark))
+    {
+        classarray.add(dark);
+    }
+}
+
+function SwitchtoLight(classarray, light, dark)
+{
+    if (classarray.contains(dark))
+    {
+        classarray.remove(dark);
+    }
+    if (!classarray.contains(light))
+    {
+        classarray.add(light);
+    }
+}
+
+function DarkMode()
+{
+    // Declare Constants ///////////////////
+    const noon = [6,7,8,9,10,11,12,13,14,15,16,17,18];
+
+    date = new Date();
+    currentTime = date.getHours();
+
+    const lightstyle =
+    {
+        navbar : "navbar-light",
+        navbarbg : "bg-body",
+        bodycss : "bg-body",
+        text : "text-dark",
+    }
+    const darkstyle = 
+    {
+        navbar : "navbar-dark",
+        navbarbg : "bg-dark",
+        bodycss : "bg-dark",
+        text : "text-white",
+    }
+
+    // Navbar Switch //////////////
+    const navbar = document.getElementById('rvn-navbar').classList;
+  
+    if (noon.includes(currentTime))
+    {
+        SwitchtoLight(navbar, lightstyle.navbar, darkstyle.navbar);
+        SwitchtoLight(navbar, lightstyle.navbarbg, darkstyle.navbarbg);
+    }
+    else
+    {
+        SwitchtoDark(navbar, lightstyle.navbar, darkstyle.navbar);
+        SwitchtoDark(navbar, lightstyle.navbarbg, darkstyle.navbarbg);
+    }
+
+    // HomePage Exception ////////////////////
+    const bodystyle = document.body.classList;
+    const hashome = HomePageException(bodystyle);
+    if (hashome)
+    {
+        return;
+    }
+
+    // Body Switch ////////////////
+    if (noon.includes(currentTime))
+    {
+        SwitchtoLight(bodystyle, lightstyle.bodycss, darkstyle.bodycss);
+        SwitchtoLight(bodystyle, lightstyle.text, darkstyle.text);
+    }
+    else
+    {
+        SwitchtoDark(bodystyle, lightstyle.bodycss, darkstyle.bodycss);
+        SwitchtoDark(bodystyle, lightstyle.text, darkstyle.text);
+    }
+
 }
 
 

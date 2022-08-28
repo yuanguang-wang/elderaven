@@ -10,8 +10,8 @@
     <?php
     wp_head();
     ?>
-
-    <nav class="navbar navbar-expand-md bg-opacity-50 border-bottom border-secondary border-opacity-50" role="navigation" id="rvn-navbar">
+ 
+    <nav class="navbar navbar-expand-md" role="navigation" id="rvn-navbar">
         <div class="container d-flex flex-row-reverse px-1">
             <!-- Brand and toggle get grouped for better mobile display -->
             <button class="navbar-toggler mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'your-theme-slug'); ?>">

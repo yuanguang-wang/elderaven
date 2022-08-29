@@ -113,18 +113,35 @@ function AddRowStyle(rowId)
 
 // Repository ////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-const repoCss = 
+const repoCssDk = 
 {
-    row : "row row-cols-md-4 g-4 mt-1",
-    colomn : "col-sm",
-    card : "card text-bg-secondary bg-opacity-10 text-white border-secondary",
-    header : "card-header border-secondary",
+    row : "row row-cols-4 mt-1",
+    colomn : "col-sm px-4",
+    card : "card text-bg-secondary bg-opacity-10 text-white border-secondary border-opacity-50 h-100",
+    header : "card-header border-secondary border-opacity-50",
     body : "card-body bg-dark",
-    footer : "card-footer border-secondary",
-    content : "card-text",
-    btngroup : "btn-group-vertical text-left",
-    btn : "btn btn-outline-secondary",
+    footer : "card-footer border-secondary border-opacity-50",
+    content : "card-text mt-3",
+    btngroup : "btn-group-vertical container-fluid px-0",
+    btn : "btn btn-outline-secondary text-white",
+    badge : "badge rounded-pill text-bg-secondary fw-normal me-2"
 }
+
+const repoCssDl = 
+{
+    row : "row row-cols-4 mt-1",
+    colomn : "col-sm px-4",
+    card : "card text-bg-light text-dark border-secondary border-opacity-50 h-100",
+    header : "card-header border-secondary border-opacity-50",
+    body : "card-body bg-body",
+    footer : "card-footer border-secondary border-opacity-50",
+    content : "card-text mt-3",
+    btngroup : "btn-group-vertical container-fluid px-0",
+    btn : "btn btn-outline-secondary border-opacity-50 text-dark",
+    badge : "badge rounded-pill text-bg-light fw-normal me-2"
+}
+
+let repoCss;
 
 function AddButton(href, text)
 {
@@ -136,11 +153,22 @@ function AddButton(href, text)
     return singleBtn;
 }
 
-function AddRepoCard(headtext, footertext, contenttext,
+function AddBadge(content)
+{
+    let repoBadge = document.createElement("span");
+    repoBadge.className = repoCss.badge;
+    repoBadge.innerText = content;
+    return repoBadge;
+}
+
+function AddRepoCard(headtext, contenttext,
     readmeLink, readmeText,
     gitLink, gitText,
     foodLink, foodText,
-    rowid
+    rowid,
+    version,
+    lang,
+    platform
     )
 {
     // Colomn Create //
@@ -163,7 +191,6 @@ function AddRepoCard(headtext, footertext, contenttext,
     // Footer Create //
     let cardFooter = document.createElement("div");
     cardFooter.className = repoCss.footer;
-    cardFooter.innerText = footertext;
 
     // Content Create //
     let cardPara = document.createElement("p");
@@ -181,12 +208,20 @@ function AddRepoCard(headtext, footertext, contenttext,
     let gitbtn = AddButton(gitLink, gitText);
     let foodbtn = AddButton(foodLink, foodText);
 
+    //Badge //
+    let versionbdg = AddBadge(version);
+    let langbdg = AddBadge(lang);
+    let platformbdg = AddBadge(platform);
+
     // Cascade //
     btngroup.appendChild(readmebtn);
     btngroup.appendChild(gitbtn);
     btngroup.appendChild(foodbtn);
-    cardBody.appendChild(cardPara);
     cardBody.appendChild(btngroup);
+    cardBody.appendChild(cardPara);
+    cardFooter.appendChild(versionbdg);
+    cardFooter.appendChild(langbdg);
+    cardFooter.appendChild(platformbdg);
     repoCard.appendChild(cardHead);
     repoCard.appendChild(cardBody);
     repoCard.appendChild(cardFooter);
@@ -311,12 +346,14 @@ function DarkMode()
         SwitchtoLight(navbar, lightstyle.navbar, darkstyle.navbar);
         SwitchtoLight(navbar, lightstyle.navbarbg, darkstyle.navbarbg);
         SwitchtoLight(navbar, lightstyle.navopc, darkstyle.navopc);
+        repoCss = repoCssDl;
     }
     else
     {
         SwitchtoDark(navbar, lightstyle.navbar, darkstyle.navbar);
         SwitchtoDark(navbar, lightstyle.navbarbg, darkstyle.navbarbg);
         SwitchtoDark(navbar, lightstyle.navopc, darkstyle.navopc);
+        repoCss = repoCssDk;
     }
 
     // HomePage Exception ////////////////////

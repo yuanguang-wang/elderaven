@@ -121,10 +121,14 @@ const repoCssDk =
     header : "card-header border-secondary border-opacity-50",
     body : "card-body bg-dark",
     footer : "card-footer border-secondary border-opacity-50",
-    content : "card-text mt-3",
+    content : "card-text",
     btngroup : "btn-group-vertical container-fluid px-0",
     btn : "btn btn-outline-secondary text-white",
-    badge : "badge rounded-pill text-bg-secondary fw-normal me-2"
+    badge : "badge rounded-pill text-bg-secondary fw-normal me-2",
+    li : "list-group-item bg-dark border-secondary border-opacity-50",
+    ul : "list-group list-group-flush",
+    a : "text-decoration-none text-white",
+    icon : "fa-solid fa-link me-1"
 }
 
 const repoCssDl = 
@@ -135,22 +139,33 @@ const repoCssDl =
     header : "card-header border-secondary border-opacity-50",
     body : "card-body bg-body",
     footer : "card-footer border-secondary border-opacity-50",
-    content : "card-text mt-3",
+    content : "card-text",
     btngroup : "btn-group-vertical container-fluid px-0",
     btn : "btn btn-outline-secondary border-opacity-50 text-dark",
-    badge : "badge rounded-pill text-bg-light fw-normal me-2"
+    badge : "badge rounded-pill text-bg-light fw-normal me-2",
+    li : "list-group-item bg-body border-secondary border-opacity-50",
+    ul : "list-group list-group-flush",
+    a : "text-decoration-none text-dark",
+    icon : "fa-solid fa-link me-1"
 }
 
 let repoCss;
 
 function AddButton(href, text)
 {
+    let singleLi = document.createElement("li");
     let singleBtn = document.createElement("a");
+    let linkIcon = document.createElement("i");
+    linkIcon.className = repoCss.icon;
+    linkIcon.style.color = "white";
     singleBtn.href = href;
-    singleBtn.className = repoCss.btn;
+    singleBtn.className = repoCss.a;
+    singleLi.className = repoCss.li;
     singleBtn.innerText = text;
+    singleLi.appendChild(linkIcon);
+    singleLi.appendChild(singleBtn);
     
-    return singleBtn;
+    return singleLi;
 }
 
 function AddBadge(content)
@@ -180,7 +195,7 @@ function AddRepoCard(headtext, contenttext,
     repoCard.className = repoCss.card;
 
     // Header Create //
-    let cardHead = document.createElement("div");
+    let cardHead = document.createElement("h6");
     cardHead.className = repoCss.header;
     cardHead.innerText = headtext;
 
@@ -203,6 +218,10 @@ function AddRepoCard(headtext, contenttext,
     btngroup.setAttribute("role", "group");
     btngroup.setAttribute("aria-label", "Vertical button group");
 
+    // UL Create //
+    let cardUl = document.createElement("ul");
+    cardUl.className = repoCss.ul;
+
     // Button //
     let readmebtn = AddButton(readmeLink, readmeText);
     let gitbtn = AddButton(gitLink, gitText);
@@ -214,16 +233,16 @@ function AddRepoCard(headtext, contenttext,
     let platformbdg = AddBadge(platform);
 
     // Cascade //
-    btngroup.appendChild(readmebtn);
-    btngroup.appendChild(gitbtn);
-    btngroup.appendChild(foodbtn);
-    cardBody.appendChild(btngroup);
+    cardUl.appendChild(readmebtn);
+    cardUl.appendChild(gitbtn);
+    cardUl.appendChild(foodbtn);
     cardBody.appendChild(cardPara);
     cardFooter.appendChild(versionbdg);
     cardFooter.appendChild(langbdg);
     cardFooter.appendChild(platformbdg);
     repoCard.appendChild(cardHead);
     repoCard.appendChild(cardBody);
+    repoCard.appendChild(cardUl);
     repoCard.appendChild(cardFooter);
     singleCol.appendChild(repoCard);
 

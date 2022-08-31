@@ -10,7 +10,11 @@
     <?php
     wp_head();
     ?>
- 
+
+    <script>
+        ModeSiwtcher();
+    </script>
+
     <nav class="navbar navbar-expand-md" role="navigation" id="rvn-navbar">
         <div class="container d-flex flex-row-reverse px-1">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -33,10 +37,10 @@
         </div>
     </nav>
 
-
 </head>
 
 <body <?php body_class(); ?>>
+
     <script>
-        window.onload = DarkMode()
+        AddNavbarStyle();
     </script>

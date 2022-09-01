@@ -6,15 +6,15 @@ A customized wordpress theme dedicated for elderaven.com
 
 Customized features used to decorate the site, include followings
 
-### Front Page
+### - Front Page
 
 Front page background image changed automatically by detecting browser’s date information.
 
-### Dark Mode
+### - Dark Mode
 
 Automatically triggered dark mode theme by detecting browser’s date information. No switch button intendedly, just decided by the time of the day.
 
-### Gallery
+### - Gallery
 
 Hand-coded gallery page for showing projects.
 
@@ -23,13 +23,15 @@ Hand-coded gallery page for showing projects.
 CMS by [wordpress](https://wordpress.org/) <br>
 CSS by [bootstrap v5.2.0](https://getbootstrap.com/) <br>
 Nav by [WP Bootstrap Navwalker](https://github.com/wp-bootstrap/wp-bootstrap-navwalker) <br>
+Icon by [Font Awesome](https://fontawesome.com/) <br>
+Code Style by [Syntax Highlighter](https://highlight.hohli.com/) <br>
 
 ## Epilogue
 
 ```javascript
-if (js == headache){
+if ("js" == "headache"){
     <?php echo(':roll_eyes:'); ?>
 }
 ```
 
-:roll_eyes:
+:roll_eyes: :roll_eyes: :roll_eyes:

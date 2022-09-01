@@ -4,20 +4,15 @@
 <div class="container">
 
     <br>
+    <div id="repo-title-1">
+        <script>
+            AddRepoTitle("repo-title-1", "Pre-Cast Plugins", "fa-solid fa-circle-nodes");
+        </script>
 
-    <div class="text-sm-left mt-3">
-        <div class="center">
-            <h5 class="fw-normal m-0">
-                <i class="fa-solid fa-circle-nodes fa-sm me-1" id="faicon"></i>
-                Pre-Cast Plugins
-            </h5>
-        </div>
-        <hr class="mb-0">
     </div>
 
     <div id="row-1">
         <script>
-            AddRowStyle("row-1");
             AddRepoPlugInCard("row-1",
                 "Deviant Inspector",
                 "Detect, markup and add up several types of bad objects in a rhino model.",
@@ -29,20 +24,22 @@
                 "Food4Rhino",
                 "V1.0.2",
                 "C#",
-                "Rhino"
+                "Rhino",
+                "fa-solid fa-binoculars"
             );
             AddRepoPlugInCard("row-1",
-                "elderaven.com",
+                "elderaven",
                 "An online vault storing some sundries of yuanguang wang.",
                 "https://elderaven.com/404",
                 "Readme",
                 "https://github.com/yuanguang-wang/elderaven",
                 "Github",
                 "https://elderaven.com/",
-                "elderaven",               
+                "elderaven",
                 "V0.9.9",
                 "Javascript",
-                "php"
+                "php",
+                "fa-solid fa-crow"
             );
             AddRepoPlugInCard("row-1",
                 "MultiCut",
@@ -53,39 +50,34 @@
                 "Github",
                 "https://elderaven.com/404",
                 "Food4Rhino",
-                "V0.0.0",
+                "Under Construction",
                 "C#",
-                "Rhino"
+                "Rhino",
+                "fa-solid fa-scissors"
             );
+            //AddBlankCard("row-1")
         </script>
     </div>
 
     <br>
     <br>
+    <div id="repo-title-2">
+        <script>
+            AddRepoTitle("repo-title-2", "Cast-In-Place Codes", "fa-solid fa-code");
+        </script>
 
-    <div class="text-sm-left mt-3">
-        <div class="d-flex flex-row">
-            <i class="fa-solid fa-code mt-2 mb-1" id="faicon"></i>
-            <h5 class="fw-normal mt-2 mx-2 mb-1">Pre-Cast Plugins</h5>
-        </div>
-        <hr class="mb-0">
     </div>
 
     <div id="row-2">
         <script>
-            AddRowStyle("row-2");
-            AddRepoPlugInCard("row-2",
-                "Deviant Inspector",
-                "Detect several types of bad objects in a rhino model",
-                "https://elderaven.com/404",
+            AddRepoCodeCard("row-2",
+                "GFA Calculator",
+                "Calculate the GFA of given massing by catching the bottom face.",
+                "https://elderaven.com/gfacalculator",
                 "Readme",
-                "https://github.com/yuanguang-wang/Deviant-Inspector",
-                "Github",
-                "https://www.food4rhino.com/en/app/deviant-inspector",
-                "Food4Rhino",               
-                "V1.0.2",
-                "C#",
-                "Rhino"
+                "python",
+                "Rhino",
+                "fa-solid fa-gavel"
             )
         </script>
     </div>

@@ -6,17 +6,17 @@ A customized wordpress theme dedicated for elderaven.com
 
 Customized features used to decorate the site, include followings
 
-### - Front Page
+#### - Front Page
 
 Front page background image changed automatically by detecting browser’s date information.
 
-### - Dark Mode
+#### - Dark Mode
 
 Automatically triggered dark mode theme by detecting browser’s date information. No switch button intendedly, just decided by the time of the day.
 
-### - Gallery
+#### - Gallery / Repo
 
-Hand-coded gallery page for showing projects.
+Hand-coded gallery and Repository page for showing projects.
 
 ## Dependences
 
